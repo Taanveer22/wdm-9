@@ -14,6 +14,11 @@ const PublicRoutes = createBrowserRouter([
       {
         index: true,
         element: <Home></Home>,
+        loader: async () => {
+          const res = await fetch("/adventuresData.json");
+          const data = await res.json();
+          return data;
+        },
       },
       {
         path: "/login",
