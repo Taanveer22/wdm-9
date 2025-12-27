@@ -9,7 +9,7 @@ const RootLayout = () => {
         <Navbar></Navbar>
       </nav>
       {/*===== RootElement Children will stay here===== */}
-      <main className="w-11/12 mx-auto my-8">
+      <main className="w-11/12 mx-auto my-8 lg:my-12">
         <Outlet></Outlet>
       </main>
       <footer>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Gias Uddin",
+    "role": "Traveler",
+    "image": "https://i.ibb.co.com/GngmQ5H/boy1.png",
+    "rating": 5,
+    "review": "Perfectly organized trip with unforgettable moments experience."
+  },
+  {
+    "id": 2,
+    "name": "Mir Jakaria",
+    "role": "Adventure Lover",
+    "image": "https://i.ibb.co.com/sJK5SqG/boy2.jpg",
+    "rating": 4,
+    "review": "Exciting destinations, friendly guides, and a safe, enjoyable journey overall."
+  },
+  {
+    "id": 3,
+    "name": "Ferdous Zahid",
+    "role": "Mountain Trekker",
+    "image": "https://i.ibb.co.com/0sG0ppQ/girl2.jpg",
+    "rating": 5,
+    "review": "Great service, fair pricing, and memories I will cherish forever."
+  }
+]

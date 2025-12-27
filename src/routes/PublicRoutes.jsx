@@ -17,7 +17,10 @@ const PublicRoutes = createBrowserRouter([
         loader: async () => {
           const res = await fetch("/adventuresData.json");
           const data = await res.json();
-          return data;
+
+          const res2 = await fetch("/reviewsData.json");
+          const data2 = await res2.json();
+          return { data, data2 };
         },
       },
       {
