@@ -107,12 +107,12 @@ const Navbar = () => {
               {user ? (
                 <button
                   onClick={handleUserSignOut}
-                  className="btn btn-sm btn-error"
+                  className="btn btn-sm btn-neutral"
                 >
                   Logout
                 </button>
               ) : (
-                <Link to="/login" className="btn btn-info">
+                <Link to="/login" className="btn btn-sm btn-neutral">
                   Login
                 </Link>
               )}
