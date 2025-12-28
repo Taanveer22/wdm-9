@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Reviews from "../components/Reviews";
 import WhyChooseUs from "../components/WhyChooseUs";
 
+
 const Home = () => {
   const { data, data2 } = useLoaderData();
   // console.log(data, data2);

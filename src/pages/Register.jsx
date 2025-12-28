@@ -112,15 +112,15 @@ const Register = () => {
         )}
         <div className="flex justify-center items-center">
           <div className="space-x-4 mt-4">
-            <Link to="/login" className="btn btn-sm btn-info">
-              Login
-            </Link>
             <button
               onClick={handleGoogleSignIn}
               className="btn btn-sm btn-warning"
             >
               Signin With Google
             </button>
+            <Link to="/login" className="btn btn-sm btn-info">
+              Login
+            </Link>
           </div>
         </div>
       </div>

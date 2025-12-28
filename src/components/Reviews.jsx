@@ -3,7 +3,7 @@ const Reviews = ({ data2 }) => {
     <section className="max-w-7xl mx-auto px-4">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3">
+        <h2 className="text-3xl font-bold mb-3 animate__animated animate__flash animate__infinite">
           What Our Travelers Say
         </h2>
         <p className="text-gray-500 max-w-2xl mx-auto">

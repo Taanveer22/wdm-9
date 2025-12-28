@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="card bg-neutral-500 text-neutral-content p-4">
-        <h1 className="text-center text-xl font-medium">
+        <h1 className="text-center text-xl font-medium" >
           Welcome to Chill Mountain Trekkers
         </h1>
         <div className="card-body">
