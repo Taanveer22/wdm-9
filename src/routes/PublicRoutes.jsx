@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Profile from "../pages/Profile";
 import Privacy from "../pages/Privacy";
+import CardDetails from "../components/CardDetails";
 
 const PublicRoutes = createBrowserRouter([
   {
@@ -23,6 +24,16 @@ const PublicRoutes = createBrowserRouter([
           const res2 = await fetch("/reviewsData.json");
           const data2 = await res2.json();
           return { data, data2 };
+        },
+      },
+      {
+        path: "/cardDetails/:id",
+        element: <CardDetails></CardDetails>,
+        loader: async ({ params }) => {
+          const res = await fetch("/adventuresData.json");
+          const data = await res.json();
+          const singleData = data.find((item) => item.id == params.id);
+          return singleData;
         },
       },
       {

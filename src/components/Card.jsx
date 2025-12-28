@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Card = ({ advItem }) => {
   return (
     <div>
@@ -45,7 +47,7 @@ const Card = ({ advItem }) => {
             </li>
           </ul>
           <div className="card-actions justify-center">
-            <button className="btn btn-sm btn-info">Explore Now</button>
+            <Link to={`/cardDetails/${advItem?.id}`} className="btn btn-sm btn-info">Explore Now</Link>
           </div>
         </div>
       </div>

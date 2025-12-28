@@ -4,9 +4,8 @@ import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
-
   const { user, userSignOut } = useContext(AuthContext);
-  
+
   const handleUserSignOut = () => {
     userSignOut()
       .then(() => {
@@ -17,17 +16,38 @@ const Navbar = () => {
       });
   };
   const links = (
-    <>
+    <div className="flex gap-6 itmes-center">
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "btn btn-sm btn-success" : "btn btn-sm btn-error"
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/profile">Profile</NavLink>
+        <NavLink
+          to="/profile"
+          className={({ isActive }) =>
+            isActive ? "btn btn-sm btn-success" : "btn btn-sm btn-error"
+          }
+        >
+          Profile
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/privacy">Privacy</NavLink>
+        <NavLink
+          to="/privacy"
+          className={({ isActive }) =>
+            isActive ? "btn btn-sm btn-success" : "btn btn-sm btn-error"
+          }
+        >
+          Privacy
+        </NavLink>
       </li>
-    </>
+    </div>
   );
   return (
     <div>
@@ -77,7 +97,7 @@ const Navbar = () => {
                   Logout
                 </button>
               ) : (
-                <Link to="/login" className="btn btn-sm btn-success">
+                <Link to="/login" className="btn btn-info">
                   Login
                 </Link>
               )}
