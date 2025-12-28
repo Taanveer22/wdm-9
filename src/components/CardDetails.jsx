@@ -11,13 +11,13 @@ const CardDetails = () => {
 
   const handleTalkWithExpert = () => {
     if (currentHour >= 10 && currentHour <= 20) {
-      document.getElementById("custom_modal").showModal();
-    } else {
       window.open(
         "https://meet.google.com/landing",
         "_blank",
         "noopener,noreferrer"
       );
+    } else {
+      document.getElementById("custom_modal").showModal();
     }
   };
 

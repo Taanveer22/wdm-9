@@ -7,6 +7,7 @@ import Register from "../pages/Register";
 import Profile from "../pages/Profile";
 import Privacy from "../pages/Privacy";
 import CardDetails from "../components/CardDetails";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const PublicRoutes = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const PublicRoutes = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/updateProfile",
+        element: <UpdateProfile></UpdateProfile>,
       },
       {
         path: "/privacy",
