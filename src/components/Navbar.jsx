@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, userSignOut } = useContext(AuthContext);
+  // Step 1: keep track of hover state (true / false)
+  const [showName, setShowName] = useState(false);
 
   const handleUserSignOut = () => {
     userSignOut()
@@ -85,10 +87,23 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <div className="flex gap-2 items-center">
-            <div className="">
-              {user && user?.displayName && <p>{user.displayName}</p>}
+            {/* Step 2: wrapper for image + name & "relative" is needed for
+            positioning the name */}
+            <div
+              className="relative"
+              onMouseEnter={() => setShowName(true)}
+              onMouseLeave={() => setShowName(false)}
+            >
+              {/* Step 3: show user name when hovering */}
+              {showName && (
+                <p className="absolute right-14 ">
+                  {user?.displayName}
+                </p>
+              )}
+              {/* Step 4: user profile image */}
+              <img src={user?.photoURL} className="w-12 rounded-full" />
             </div>
-            <div className="">
+            <div>
               {user ? (
                 <button
                   onClick={handleUserSignOut}
