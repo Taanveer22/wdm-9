@@ -19,6 +19,8 @@ const RootLayout = () => {
       document.title = "Update Profile | Chill Mountain Trekkers";
     } else if (location.pathname === "/privacy") {
       document.title = "Privacy | Chill Mountain Trekkers";
+    } else if (location.pathname === "/forgetPassword") {
+      document.title = "Forget Password | Chill Mountain Trekkers";
     } else {
       document.title = "Chill Mountain Trekkers";
     }

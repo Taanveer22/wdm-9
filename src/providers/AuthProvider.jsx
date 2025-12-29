@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -16,8 +17,6 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const namejs = "react";
-
   // function 01
   const googleProvider = new GoogleAuthProvider();
   const googleSignIn = () => {
@@ -30,12 +29,10 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
   // function 03
-  const userUpdateProfile = (userName, userPhoto) => {
-    return updateProfile(auth.currentUser, {
-      displayName: userName,
-      photoURL: userPhoto,
-    });
+  const userPasswordReset = (email) => {
+    return sendPasswordResetEmail(auth, email);
   };
+
   // function 04
   const userCreateByRegister = (email, password) => {
     setLoading(true);
@@ -47,6 +44,15 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+
+  // function 06
+  const userUpdateProfile = (userName, userPhoto) => {
+    return updateProfile(auth.currentUser, {
+      displayName: userName,
+      photoURL: userPhoto,
+    });
+  };
+
   const authData = {
     user,
     loading,
@@ -55,7 +61,7 @@ const AuthProvider = ({ children }) => {
     userSignOut,
     userCreateByRegister,
     userSigninByLogin,
-    namejs,
+    userPasswordReset,
   };
 
   useEffect(() => {

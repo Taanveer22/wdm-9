@@ -1,17 +1,22 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { setEmailToLs } from "../utilities/localStorage";
 
 const Login = () => {
   const { googleSignIn, userSigninByLogin } = useContext(AuthContext);
 
+  // store email and password input value
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const handleLoginForm = (e) => {
     e.preventDefault();
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    console.log(email, password);
+    // const email = e.target.email.value;
+    // const password = e.target.password.value;
+    // console.log(email, password);
 
     userSigninByLogin(email, password)
       .then(() => {
@@ -31,6 +36,11 @@ const Login = () => {
         toast.error("google sign in failed");
       });
   };
+
+  // Save email before going to ForgetPassword page
+  const handleForgetPassword = () => {
+    setEmailToLs(email);
+  };
   return (
     <div className="flex justify-center items-center">
       <div>
@@ -43,6 +53,8 @@ const Login = () => {
             <fieldset className="fieldset">
               <label className="label">Email</label>
               <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 name="email"
                 type="email"
                 className="input"
@@ -50,13 +62,22 @@ const Login = () => {
               />
               <label className="label">Password</label>
               <input
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 name="password"
                 type="password"
                 className="input"
                 placeholder="Password"
               />
               <div>
-                <a className="link link-hover">Forgot password?</a>
+                {/* Pass email using state */}
+                <Link
+                  onClick={handleForgetPassword}
+                  to="/forgetPassword"
+                  className="link link-hover"
+                >
+                  Forgot password?
+                </Link>
               </div>
               <button className="btn btn-neutral mt-4">Login</button>
             </fieldset>

@@ -8,6 +8,7 @@ import Profile from "../pages/Profile";
 import Privacy from "../pages/Privacy";
 import CardDetails from "../components/CardDetails";
 import UpdateProfile from "../pages/UpdateProfile";
+import ForgetPassword from "../pages/ForgetPassword";
 
 const PublicRoutes = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const PublicRoutes = createBrowserRouter([
       {
         path: "/updateProfile",
         element: <UpdateProfile></UpdateProfile>,
+      },
+      {
+        path: "/forgetPassword",
+        element: <ForgetPassword></ForgetPassword>,
       },
       {
         path: "/privacy",
