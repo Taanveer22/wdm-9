@@ -1,8 +1,15 @@
-# 🏔️ Chill Mountain Trekkers
+# 🏔️ Chill Travelers
 
-## 🎯 Purpose of the Website
+Chill Travelers is your seamless all-in-one journey from first inspiration to final destination
 
-Chill Mountain Trekkers is a travel agency demo platform where users can securely register, log in, and manage their profiles.  
+## 🌐 Live Website 
+
+🚀 Experience the project live here:  
+👉 **[Chill Travelers – Live Demo](https://wdm-9-a334f.web.app)**
+
+## 🎯 Purpose 
+
+Chill Travelers is a travel agency demo platform where users can securely register, log in, and manage their profiles.  
 The website allows users to explore travel service cards, view details, and connect with experts through an interactive interface.  
 This project showcases modern frontend development with authentication and smooth UI interactions.
 
@@ -26,11 +33,6 @@ This project showcases modern frontend development with authentication and smoot
 - 🎨 **UI Enhancements & Animations**
   - Animate.css integrated and used on the homepage
   - Card details designed with a **“Talk with Expert”** button functionality
-
-## 🌐 Live Website
-
-🚀 Experience the project live here:  
-👉 **[Chill Mountain Trekkers – Live Demo](https://wdm-9-a334f.web.app)**
 
 ## 🛠️ Tech Stack
 
