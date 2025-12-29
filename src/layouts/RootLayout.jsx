@@ -5,24 +5,25 @@ import { useEffect } from "react";
 
 const RootLayout = () => {
   const location = useLocation();
+  // console.log(location);
 
   useEffect(() => {
     if (location.pathname === "/") {
-      document.title = "Home | Chill Mountain Trekkers";
+      document.title = "Home | Chill Travelers";
     } else if (location.pathname === "/login") {
-      document.title = "Login | Chill Mountain Trekkers";
+      document.title = "Login | Chill Travelers";
     } else if (location.pathname === "/register") {
-      document.title = "Register | Chill Mountain Trekkers";
+      document.title = "Register | Chill Travelers";
     } else if (location.pathname === "/profile") {
-      document.title = "Profile | Chill Mountain Trekkers";
+      document.title = "Profile | Chill Travelers";
     } else if (location.pathname === "/updateProfile") {
-      document.title = "Update Profile | Chill Mountain Trekkers";
+      document.title = "Update Profile | Chill Travelers";
     } else if (location.pathname === "/privacy") {
-      document.title = "Privacy | Chill Mountain Trekkers";
+      document.title = "Privacy | Chill Travelers";
     } else if (location.pathname === "/forgetPassword") {
-      document.title = "Forget Password | Chill Mountain Trekkers";
+      document.title = "Forget Password | Chill Travelers";
     } else {
-      document.title = "Chill Mountain Trekkers";
+      document.title = "Chill Travelers";
     }
   }, [location.pathname]);
 

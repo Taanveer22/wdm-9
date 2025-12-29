@@ -80,8 +80,8 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <h1 className="text-xl font-semibold">
-            Chill Mountain Trekkers
+          <h1 className="text-2xl font-semibold">
+            Chill Travelers
           </h1>
         </div>
         <div className="navbar-center hidden lg:flex">
