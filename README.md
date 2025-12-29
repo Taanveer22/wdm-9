@@ -1,16 +1,54 @@
-# React + Vite
+# 🏔️ Chill Mountain Trekkers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🎯 Purpose of the Website
 
-Currently, two official plugins are available:
+Chill Mountain Trekkers is a travel agency demo platform where users can securely register, log in, and manage their profiles.  
+The website allows users to explore travel service cards, view details, and connect with experts through an interactive interface.  
+This project showcases modern frontend development with authentication and smooth UI interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Project Features
 
-## React Compiler
+- 🔐 **Authentication System**
+  - Email/password registration and login
+  - Google login integration for quick access
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📧 **Password Reset Functionality**
+  - Password reset email handled using localStorage as per instructions
 
-## Expanding the ESLint configuration
+- 🧭 **Dynamic Page Titles**
+  - Each page updates the browser title dynamically for better user experience
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 👤 **User Profile Management**
+  - View and update user profile
+  - Profile image and username shown on navbar hover
+  - Navbar hover-related issues resolved
+
+- 🎨 **UI Enhancements & Animations**
+  - Animate.css integrated and used on the homepage
+  - Card details designed with a **“Talk with Expert”** button functionality
+
+## 🌐 Live Website
+
+🚀 Experience the project live here:  
+👉 **[Chill Mountain Trekkers – Live Demo](https://console.firebase.google.com/)**
+
+## 🛠️ Tech Stack
+
+**Client:** React, Tailwind CSS, React Router, Animate.css  
+**Authentication & Backend:** Firebase Authentication
+
+## 📦 NPM Packages Used
+
+- **react** – Core library for building user interfaces
+- **react-dom** – DOM rendering support for React
+- **react-router-dom** – Client-side routing and navigation
+- **firebase** – Authentication and backend services
+- **tailwindcss** – Utility-first CSS framework
+- **@tailwindcss/vite** – Tailwind CSS integration with Vite
+- **animate.css** – Prebuilt CSS animations
+- **react-hot-toast** – Toast notifications for alerts and feedback
+- **react-icons** – Popular icon library for React
+- **lucide-react** – Modern and customizable icon set
+- **localforage** – Offline storage wrapper for localStorage/IndexedDB
+- **match-sorter** – Advanced filtering and search functionality
+- **sort-by** – Simple sorting utility for arrays
