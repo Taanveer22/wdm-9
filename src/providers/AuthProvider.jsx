@@ -10,6 +10,7 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase/firebase.config";
+
 // === create context outside component====
 const AuthContext = createContext(null);
 
@@ -30,6 +31,7 @@ const AuthProvider = ({ children }) => {
   };
   // function 03
   const userPasswordReset = (email) => {
+    setLoading(true);
     return sendPasswordResetEmail(auth, email);
   };
 
@@ -39,7 +41,7 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  // function 04
+  // function 05
   const userSigninByLogin = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
@@ -53,6 +55,20 @@ const AuthProvider = ({ children }) => {
     });
   };
 
+  // === manage side effects ===
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      // console.log(currentUser);
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    return () => {
+      unSubscribe();
+    };
+  }, []);
+
+  // === pass variable to context value ===
   const authData = {
     user,
     loading,
@@ -63,18 +79,6 @@ const AuthProvider = ({ children }) => {
     userSigninByLogin,
     userPasswordReset,
   };
-
-  useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser);
-      setUser(currentUser);
-      setLoading(false);
-    });
-
-    return () => {
-      unSubscribe();
-    };
-  }, []);
 
   return (
     <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>

@@ -1,11 +1,14 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { setEmailToLs } from "../utilities/localStorage";
 
 const Login = () => {
   const { googleSignIn, userSigninByLogin } = useContext(AuthContext);
+  const location = useLocation();
+  // console.log(location);
+  const navigate = useNavigate();
 
   // store email and password input value
   const [email, setEmail] = useState("");
@@ -21,6 +24,7 @@ const Login = () => {
     userSigninByLogin(email, password)
       .then(() => {
         toast.success("login successful");
+        navigate(location.state.from);
       })
       .catch(() => {
         toast.error("login failed");
@@ -31,6 +35,7 @@ const Login = () => {
     googleSignIn()
       .then(() => {
         toast.success("google sign in successful");
+        navigate(location.state.from);
       })
       .catch(() => {
         toast.error("google sign in failed");

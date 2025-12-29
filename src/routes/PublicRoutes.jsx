@@ -9,6 +9,7 @@ import Privacy from "../pages/Privacy";
 import CardDetails from "../components/CardDetails";
 import UpdateProfile from "../pages/UpdateProfile";
 import ForgetPassword from "../pages/ForgetPassword";
+import PrivateRoute from "./PrivateRoute";
 
 const PublicRoutes = createBrowserRouter([
   {
@@ -30,7 +31,11 @@ const PublicRoutes = createBrowserRouter([
       },
       {
         path: "/cardDetails/:id",
-        element: <CardDetails></CardDetails>,
+        element: (
+          <PrivateRoute>
+            <CardDetails></CardDetails>
+          </PrivateRoute>
+        ),
         loader: async ({ params }) => {
           const res = await fetch("/adventuresData.json");
           const data = await res.json();
@@ -48,7 +53,11 @@ const PublicRoutes = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile></Profile>,
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/updateProfile",
