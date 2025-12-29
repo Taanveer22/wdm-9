@@ -30,7 +30,7 @@ This project showcases modern frontend development with authentication and smoot
 ## 🌐 Live Website
 
 🚀 Experience the project live here:  
-👉 **[Chill Mountain Trekkers – Live Demo](https://console.firebase.google.com/)**
+👉 **[Chill Mountain Trekkers – Live Demo](https://wdm-9-a334f.web.app)**
 
 ## 🛠️ Tech Stack
 
