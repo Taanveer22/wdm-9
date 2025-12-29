@@ -53,7 +53,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-300 shadow-sm">
+      <div className="navbar bg-neutral text-neutral-content shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -64,13 +64,13 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
+               
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
@@ -80,7 +80,9 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Chill Mountain Trekkers</a>
+          <h1 className="text-xl font-semibold">
+            Chill Mountain Trekkers
+          </h1>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
@@ -96,9 +98,7 @@ const Navbar = () => {
             >
               {/* Step 3: show user name when hovering */}
               {showName && (
-                <p className="absolute right-14 ">
-                  {user?.displayName}
-                </p>
+                <p className="absolute right-14 ">{user?.displayName}</p>
               )}
               {/* Step 4: user profile image */}
               <img src={user?.photoURL} className="w-12 rounded-full" />
@@ -107,12 +107,12 @@ const Navbar = () => {
               {user ? (
                 <button
                   onClick={handleUserSignOut}
-                  className="btn btn-sm btn-neutral"
+                  className="btn btn-sm btn-info"
                 >
                   Logout
                 </button>
               ) : (
-                <Link to="/login" className="btn btn-sm btn-neutral">
+                <Link to="/login" className="btn btn-sm btn-info">
                   Login
                 </Link>
               )}

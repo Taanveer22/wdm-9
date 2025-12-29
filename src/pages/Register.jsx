@@ -110,18 +110,19 @@ const Register = () => {
         {errorMessage && (
           <p className="text-red-500 font-medium">{errorMessage}</p>
         )}
-        <div className="flex justify-center items-center">
-          <div className="space-x-4 mt-4">
-            <button
-              onClick={handleGoogleSignIn}
-              className="btn btn-sm btn-warning"
-            >
-              Signin With Google
-            </button>
-            <Link to="/login" className="btn btn-sm btn-info">
-              Login
-            </Link>
-          </div>
+        <div className="flex items-center gap-4 mt-4">
+          <h1 className="text-lg font-medium">Already Have An Account?</h1>
+          <Link to="/login" className="btn btn-sm btn-info">
+            Login
+          </Link>
+        </div>
+        <div className="flex justify-center items-center mt-4">
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-sm btn-warning"
+          >
+            Register With Google
+          </button>
         </div>
       </div>
     </div>

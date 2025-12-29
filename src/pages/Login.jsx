@@ -88,18 +88,19 @@ const Login = () => {
             </fieldset>
           </div>
         </form>
+        <div className="flex items-center gap-4 mt-4">
+          <h1 className="text-lg font-medium">Don't Have An Account?</h1>
+          <Link to="/register" className="btn btn-sm btn-info ">
+            Register
+          </Link>
+        </div>
         <div className="flex justify-center items-center mt-4">
-          <div className="space-x-4">
-            <button
-              onClick={handleGoogleSignIn}
-              className="btn btn-sm btn-warning"
-            >
-              Login With Google
-            </button>
-            <Link to="/register" className="btn btn-sm btn-info ">
-              Register
-            </Link>
-          </div>
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-sm btn-warning"
+          >
+            Login With Google
+          </button>
         </div>
       </div>
     </div>

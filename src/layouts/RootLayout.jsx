@@ -27,12 +27,12 @@ const RootLayout = () => {
   }, [location.pathname]);
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <nav>
         <Navbar></Navbar>
       </nav>
       {/*===== RootElement Children will stay here===== */}
-      <main className="w-11/12 mx-auto my-8 lg:my-12 ">
+      <main className="w-11/12 mx-auto my-8 lg:my-12 grow">
         <Outlet></Outlet>
       </main>
       <footer>
